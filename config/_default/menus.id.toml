@@ -20,6 +20,18 @@
   pageRef = "posts"
   weight = 20
 
+[[main]]
+  identifier = "github"
+  pre = "github"
+  url = "https://github.com/0zunu"
+  weight = 65
+
+[[main]]
+  identifier = "twitter"
+  pre = "twitter"
+  url = "https://twitter.com/0zunu_"
+  weight = 70
+  
 #[[main]]
 #  name = "Parent"
 #  weight = 20
