@@ -1,7 +1,7 @@
 # -- Main Menu --
 # The main menu is displayed in the header at the top of the page.
 # Acceptable parameters are name, pageRef, page, url, title, weight.
-# 
+#
 # The simplest menu configuration is to provide:
 #   name = The name to be displayed for this menu link
 #   pageRef = The identifier of the page or section to link to
@@ -11,14 +11,31 @@
 # ordered by weight from lowest to highest.
 
 [[main]]
-  name = "About"
-  pageRef = "about"
+  pre = "briefcase"
+  name = "Portfolio"
   weight = 10
+  pageRef = "portfolio"
 
 [[main]]
-  name = "Blog"
-  pageRef = "posts"
+  pre = "user-account"
+  name = "About"
   weight = 20
+  pageRef = "about"
+
+[[main]]
+  pre = "notebook"
+  name = "Resume"
+  parent = "About"
+  weight = 30
+  pageRef = "resume"
+
+[[main]]
+  pre = "newspaper-clipping"
+  name = "Blogs"
+  weight = 40
+  pageRef = "posts"
+
+# =====================Penutup======================
 
 [[main]]
   identifier = "github"
@@ -31,44 +48,6 @@
   pre = "twitter"
   url = "https://twitter.com/0zunu_"
   weight = 70
-
-#[[main]]
-#  name = "Parent"
-#  weight = 20
-
-#[[main]]
-#  name = "example sub-menu 1"
-#  parent = "Parent"
-#  pageRef = "posts"
-#  weight = 20
-
-#[[main]]
-#  name = "example sub-menu 2"
-#  parent = "Parent"
-#  pageRef = "posts"
-#  weight = 20
-
-#[[subnavigation]]
-#  name = "An interesting topic"
-#  pageRef = "tags/interesting-topic"
-#  weight = 10
-
-#[[subnavigation]]
-#  name = "My Awesome Category"
-#  pre = "github"
-#  pageRef = "categories/awesome"
-#  weight = 20
-
-#[[main]]
-#  name = "Categories"
-#  pageRef = "categories"
-#  weight = 20
-
-#[[main]]
-#  name = "Tags"
-#  pageRef = "tags"
-#  weight = 30
-
 
 # -- Footer Menu --
 # The footer menu is displayed at the bottom of the page, just before
@@ -84,3 +63,14 @@
   name = "Categories"
   pageRef = "categories"
   weight = 20
+
+[[footer]]
+  name = "Authors"
+  pageRef = "authors"
+  weight = 30
+
+[[footer]]
+  name = ""
+  pre = "rss"
+  url = "index.xml"
+  weight = 40
